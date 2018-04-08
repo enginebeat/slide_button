@@ -9,10 +9,13 @@ https://tutorials-raspberrypi.com/setup-raspberry-pi-node-js-webserver-control-g
 
 I didn't copy any of the code at all, it just gave me the idea. Thank you for the inspiration.
 
-This will be an interesting project to set up on the raspberry pi with all the features I would 
+After spending all the time creating the frontend, I just got to the conclusion that this project has very
+little use, apart from being a showcase project... It's unlikely that I would use this for any serious 
+project. saying that this will be an interesting project to set up on the raspberry pi with all the features I would 
 like to have going forward on my projects:
 
 - Authentication
 - several clients on the same server/port with realtime feedback on the status and being able to change status.
+- Set levels of authorisation for read/write based on socket number.
 
 
