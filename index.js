@@ -26,82 +26,94 @@ var switch38= document.getElementById('myonoffswitch38');
 var switch40= document.getElementById('myonoffswitch40');
 
 
+
+
 switch3.addEventListener('click', ()=>{
-
+    switchChanged(switch3);
 });
-switch5.addEventListener('click', ()=>{
 
+switch5.addEventListener('click', ()=>{
+    switchChanged(switch5);
 });
 switch7.addEventListener('click', ()=>{
-
+    switchChanged(switch7);
 });
 switch8.addEventListener('click', ()=>{
-
+    switchChanged(switch8);
 });
 switch10.addEventListener('click', ()=>{
-
+    switchChanged(switch10);
 });
 switch11.addEventListener('click', ()=>{
-
+    switchChanged(switch11);
 });
 switch12.addEventListener('click', ()=>{
-
+    switchChanged(switch12);
 });
 switch13.addEventListener('click', ()=>{
-
+    switchChanged(switch13);
 });
 switch15.addEventListener('click', ()=>{
-
+    switchChanged(switch15);
 });
 switch16.addEventListener('click', ()=>{
-
+    switchChanged(switch16);
 });
 switch18.addEventListener('click', ()=>{
-
+    switchChanged(switch18);
 });
 switch19.addEventListener('click', ()=>{
-
+    switchChanged(switch19);
 });
 switch21.addEventListener('click', ()=>{
-
+    switchChanged(switch21);
 });
 switch22.addEventListener('click', ()=>{
-
+    switchChanged(switch22);
 });
 switch23.addEventListener('click', ()=>{
-
+    switchChanged(switch23);
 });
 switch24.addEventListener('click', ()=>{
-
+    switchChanged(switch24);
 });
 switch26.addEventListener('click', ()=>{
-
+    switchChanged(switch26);
 });
 switch29.addEventListener('click', ()=>{
-
+    switchChanged(switch29);
 });
 switch31.addEventListener('click', ()=>{
-
+    switchChanged(switch31);
 });
 switch32.addEventListener('click', ()=>{
-
+    switchChanged(switch32);
 });
 switch33.addEventListener('click', ()=>{
-
+    switchChanged(switch33);
 });
 switch35.addEventListener('click', ()=>{
-
+    switchChanged(switch35);
 });
 switch36.addEventListener('click', ()=>{
-
+    switchChanged(switch36);
 });
 switch37.addEventListener('click', ()=>{
-
+    switchChanged(switch37);
 });
 switch38.addEventListener('click', ()=>{
-
+    switchChanged(switch38);
 });
 switch40.addEventListener('click', ()=>{
-
+    switchChanged(switch40);
 });
 
+function switchChanged(switchName){
+    
+    switchInfo = {
+        number: switchName.id.slice(13),
+        state: switchName.checked
+    }
+    console.log(switchInfo.number);
+    console.log(switchInfo.state);
+}
