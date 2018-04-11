@@ -7,7 +7,7 @@ var ServerController = (()=>{
     var express = require('express');
     var app = express();
 
-    app.use(express.static('./public));'))
+    app.use(express.static('./public'));
 
     const socket = require('socket.io');
     const serverIPAddress = '0.0.0.0';
@@ -66,7 +66,9 @@ var ServerController = (()=>{
                 }else if(data.state === true){
                     stateNumber = 1;
                 }
-                switch(data.number){
+                console.log(stateNumber);
+                console.log(data.number);
+                switch(Number(data.number)){
                     case 3: 
                         output3.write(stateNumber);
                         break;
