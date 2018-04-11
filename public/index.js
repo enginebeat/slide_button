@@ -1,3 +1,12 @@
+//Make connection
+
+//get the server IP Address for this socket
+var serverIPAddress = location.hostname;
+var serverPort = location.port
+console.log(serverIPAddress);
+console.log(serverPort);
+var socket = io.connect('http://' + serverIPAddress + ':' + serverPort);
+
 var switch3= document.getElementById('myonoffswitch3');
 var switch5= document.getElementById('myonoffswitch5');
 var switch7= document.getElementById('myonoffswitch7');
@@ -114,6 +123,8 @@ function switchChanged(switchName){
         number: switchName.id.slice(13),
         state: switchName.checked
     }
+    socket.emit('switchChanged', switchInfo);
     console.log(switchInfo.number);
     console.log(switchInfo.state);
 }
+

@@ -1,0 +1,24 @@
+{
+  "name": "slide_button",
+  "version": "1.0.0",
+  "description": "not really just one sliding button but the Raspberry pi 3 B+ GPIO control via sliding buttons",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enginebeat/slide_button.git"
+  },
+  "author": "LM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enginebeat/slide_button/issues"
+  },
+  "homepage": "https://github.com/enginebeat/slide_button#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.0"
+  }
+}
