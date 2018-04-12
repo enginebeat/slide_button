@@ -1,3 +1,21 @@
+#s_connection_d{
+    padding-left: 75px;
+    animation-name: flash;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+#s_connection_c{
+    padding-left: 95px;
+    color: green;
+}
+
+@keyframes flash {
+    from {color: white;}
+    to {color: red ;}
+}
+
 #container{
     height: 800px;
     width: 460px;

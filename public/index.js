@@ -45,12 +45,18 @@ socket.on('GPIOStatus', (data)=>{
 
 socket.on('disconnect', ()=>{
     console.log('Not Connected To The Server!');
-    document.getElementById('s_connection').innerHTML = 'Not Connected To The Server!'
+    var sConnLabel = document.getElementById('s_connection_c');
+    sConnLabel.id = "s_connection_d";
+    sConnLabel.innerHTML = 'Not Connected To The Server!';
+    //document.getElementById('s_connection').innerHTML = 'Not Connected To The Server!'
 
 });
 
 socket.on('connect', ()=>{
     console.log('Connected To The Server!');
-    document.getElementById('s_connection').innerHTML = 'Connected To The Server!';
+    var sConnLabel = document.getElementById('s_connection_d');
+    sConnLabel.id = "s_connection_c";
+    sConnLabel.innerHTML = 'Connected To The Server!';
+    //document.getElementById('s_connection').innerHTML = 'Connected To The Server!';
     requestGPIOStatus();
 });
