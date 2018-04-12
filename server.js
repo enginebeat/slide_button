@@ -14,7 +14,7 @@ var ServerController = (()=>{
     const serverPort = 9000;
 
     const server = app.listen(serverPort, serverIPAddress, ()=>{
-        console.log('server started on port ${serverPort}');
+        console.log(`server started on port ${serverPort}`);
         initSocket();
     });
 
@@ -29,6 +29,7 @@ var ServerController = (()=>{
             output11 = new gpio.DigitalOutput('P1-11');
             output12 = new gpio.DigitalOutput('P1-12');
             output13 = new gpio.DigitalOutput('P1-13');
+            output15 = new gpio.DigitalOutput('P1-15');
             output16 = new gpio.DigitalOutput('P1-16');
             output18 = new gpio.DigitalOutput('P1-18');
             output19 = new gpio.DigitalOutput('P1-19');
