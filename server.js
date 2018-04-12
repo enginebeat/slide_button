@@ -56,7 +56,7 @@ var ServerController = (()=>{
         }
 
         io.on('connection', (socket)=>{
-            console.log(`new connection on Port 9000, ID: ${socket.id}`);
+            console.log(`new connection on Port ${serverPort}, ID: ${socket.id}`);
             var socketID = socket.id;
             //Receive values from the client
             socket.on('switchChanged', (data)=>{
