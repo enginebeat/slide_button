@@ -36,9 +36,21 @@ function requestGPIOStatus(){
 
 function initPage(){
     addGlobalEventHandler();
-    requestGPIOStatus();
+    
 }
 
 socket.on('GPIOStatus', (data)=>{
     console.log(data);
+});
+
+socket.on('disconnect', ()=>{
+    console.log('Not Connected To The Server!');
+    document.getElementById('s_connection').innerHTML = 'Not Connected To The Server!'
+
+});
+
+socket.on('connect', ()=>{
+    console.log('Connected To The Server!');
+    document.getElementById('s_connection').innerHTML = 'Connected To The Server!';
+    requestGPIOStatus();
 });
