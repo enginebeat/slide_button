@@ -7,6 +7,7 @@ var ServerController = (()=>{
     var express = require('express');
     var app = express();
 
+
     app.use(express.static('./public'));
 
     const socket = require('socket.io');
@@ -22,31 +23,57 @@ var ServerController = (()=>{
     function initSocket(){
         raspi.init(()=>{
             output3 = new gpio.DigitalOutput('P1-3');
+            output3.write(0);
             output5 = new gpio.DigitalOutput('P1-5');
+            output5.write(0);
             output7 = new gpio.DigitalOutput('P1-7');
+            output7.write(0);
             output8 = new gpio.DigitalOutput('P1-8');
+            output8.write(0);
             output10 = new gpio.DigitalOutput('P1-10');
+            output10.write(0);
             output11 = new gpio.DigitalOutput('P1-11');
+            output11.write(0);
             output12 = new gpio.DigitalOutput('P1-12');
+            output12.write(0);
             output13 = new gpio.DigitalOutput('P1-13');
+            output13.write(0);
             output15 = new gpio.DigitalOutput('P1-15');
+            output15.write(0);
             output16 = new gpio.DigitalOutput('P1-16');
+            output16.write(0);
             output18 = new gpio.DigitalOutput('P1-18');
+            output18.write(0);
             output19 = new gpio.DigitalOutput('P1-19');
+            output19.write(0);
             output21 = new gpio.DigitalOutput('P1-21');
+            output21.write(0);
             output22 = new gpio.DigitalOutput('P1-22');
+            output22.write(0);
             output23 = new gpio.DigitalOutput('P1-23');
+            output23.write(0);
             output24 = new gpio.DigitalOutput('P1-24');
+            output24.write(0);
             output26 = new gpio.DigitalOutput('P1-26');
+            output26.write(0);
             output29 = new gpio.DigitalOutput('P1-29');
+            output29.write(0);
             output31 = new gpio.DigitalOutput('P1-31');
+            output31.write(0);
             output32 = new gpio.DigitalOutput('P1-32');
+            output32.write(0);
             output33 = new gpio.DigitalOutput('P1-33');
+            output33.write(0);
             output35 = new gpio.DigitalOutput('P1-35');
+            output35.write(0);
             output36 = new gpio.DigitalOutput('P1-36');
+            output36.write(0);
             output37 = new gpio.DigitalOutput('P1-37');
+            output37.write(0);
             output38 = new gpio.DigitalOutput('P1-38');
+            output38.write(0);
             output40 = new gpio.DigitalOutput('P1-40');
+            output40.write(0);
         });
 
         var io = socket(server);
@@ -153,6 +180,39 @@ var ServerController = (()=>{
                 };
                 
             });
+            
+            socket.on('GPIORequest', ()=>{
+                console.log(output3.value);
+                socket.emit('GPIOStatus', {
+                    output3:    output3.value,
+                    output5:    output5.value,
+                    output7:    output7.value,
+                    output8:    output8.value,
+                    output10:   output10.value,
+                    output11:   output11.value,
+                    output12:   output12.value,
+                    output13:   output13.value,
+                    output15:   output15.value,
+                    output16:   output16.value,     
+                    output18:   output18.value,
+                    output19:   output19.value,
+                    output21:   output21.value,
+                    output22:   output22.value,
+                    output23:   output23.value,
+                    output24:   output24.value,
+                    output26:   output26.value,
+                    output29:   output29.value,
+                    output31:   output31.value,
+                    output32:   output32.value,
+                    output33:   output33.value,
+                    output35:   output35.value,
+                    output36:   output36.value,
+                    output37:   output37.value,
+                    output38:   output38.value,
+                    output40:   output40.value
+                });
+            });
+            
         });
     }
 

@@ -13,7 +13,8 @@ function addGlobalEventHandler(){
     });
 }
 
-window.onload = addGlobalEventHandler;
+window.onload = initPage;
+
 
 function switchChanged(cName){
     searchPosition = cName.search('-');
@@ -28,3 +29,16 @@ function switchChanged(cName){
     console.log(switchInfo.state);
 }
 
+function requestGPIOStatus(){
+    socket.emit('GPIORequest', {});
+}
+
+
+function initPage(){
+    addGlobalEventHandler();
+    requestGPIOStatus();
+}
+
+socket.on('GPIOStatus', (data)=>{
+    console.log(data);
+});
