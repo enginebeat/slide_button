@@ -41,14 +41,14 @@ var ServerController = (()=>{
 
     //===============================
     app.get('/admin',(req, res)=>{
-        res.render('admin');
+        res.render('./public/views/admin');
     });
     app.get('/', (req, res)=>{
-        res.render('home');
+        res.render('./public/views/home');
     });
 
     app.get('/pi_control', isLoggedIn, (req, res)=>{
-        res.render('pi_control');
+        res.render('./public/views/pi_control');
     });
 
     app.post('/register', (req, res)=>{
@@ -60,7 +60,7 @@ var ServerController = (()=>{
                 return res.render('register');
             }
             passport.authenticate('local')(req, res, ()=>{
-            res.redirect('/secret');
+            res.redirect('./public/views/pi_control');
             });
         });
     });
@@ -68,14 +68,14 @@ var ServerController = (()=>{
     // LOGIN ROUTES
     //render login form
     app.get('/login', (req, res)=>{
-        res.render('login');
+        res.render('./public/views/login');
     });
 
     // Login logic
     //middleware
     app.post('/login', passport.authenticate('local', {
-        successRedirect: '/pi_control',
-        failureRedirect: '/login'
+        successRedirect: './public/views/pi_control',
+        failureRedirect: './public/views/login'
     }), (req, res)=>{
 
     });
@@ -91,7 +91,7 @@ var ServerController = (()=>{
         if(req.isAuthenticated()){
             return next();
         }
-        res.redirect('/login');
+        res.redirect('./public/views/login');
     }
     
     

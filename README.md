@@ -24,6 +24,7 @@ First time using the branch feature, so not sure how this is going to work out..
 started implementing the authentication part using the AuthDemo project as a template.
 
 Need to:
+- sort out Folder/file structure
 - sort out the use of views 
 - Sort out the use of partials
 - problem with the initialisation... should i get the socket going even if authentication is not done.
