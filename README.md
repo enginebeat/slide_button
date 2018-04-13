@@ -18,4 +18,15 @@ like to have going forward on my projects:
 - several clients on the same server/port with realtime feedback on the status and being able to change status.
 - Set levels of authorisation for read/write based on socket number.
 
+********** adding_auth Branch **********
+First time using the branch feature, so not sure how this is going to work out...
+
+started implementing the authentication part using the AuthDemo project as a template.
+
+Need to:
+- sort out the use of views 
+- Sort out the use of partials
+- problem with the initialisation... should i get the socket going even if authentication is not done.
+- Sort out if I need authentication on the socket connection itself or just on the page. I believe that most likely I need to get authentication on the socket or you may be able ot access as soon as you know IP and the Port.
+
 
