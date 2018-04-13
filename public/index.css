@@ -16,6 +16,24 @@
     to {color: red ;}
 }
 
+#content{
+    position: absolute;
+}
+
+#clear_all_btn{
+    position: absolute;
+    top: 75px;
+    left: 60px;
+    border-radius: 5px;
+}
+
+#set_all_btn{
+    position: absolute;
+    top: 75px;
+    left: 340px;
+    border-radius: 5px;
+}
+
 #container{
     height: 800px;
     width: 460px;

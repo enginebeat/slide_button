@@ -3,437 +3,443 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Rasp Pi Output</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js" charset="utf-8"></script>
     
 </head>
 <body>
-    <div><h2><strong id='s_connection_d'>Not Connected To The Server!</strong></h2></div>
-    <div id='container'>
-        <div id="pin_header_label"></div>
-        <div id="pin1_label" class="pin_3V3_label_l"><strong>3V3</strong></div>
-        <div id="pin2_label" class="pin_5V_label_r"><strong>5V</strong></div>
-        <div id="pin3_label" class="gpio_label_l"><strong>GPIO2</strong></div>
-        <div id="pin4_label" class="pin_5V_label_r"><strong>5V</strong></div>
-        <div id="pin5_label" class="gpio_label_l"><strong>GPIO3</strong></div>
-        <div id="pin6_label" class="pin_gnd_label_r"><strong>GND</strong></div>
-        <div id="pin7_label" class="gpio_label_l"><strong>GPIO4</strong></div>
-        <div id="pin8_label" class="gpio_label_r"><strong>GPIO14</strong></div>
-        <div id="pin9_label" class="pin_gnd_label_l"><strong>GND</strong></div>
-        <div id="pin10_label" class="gpio_label_r"><strong>GPIO15</strong></div>
-        <div id="pin11_label" class="gpio_label_l"><strong>GPIO17</strong></div>
-        <div id="pin12_label" class="gpio_label_r"><strong>GPIO18</strong></div>
-        <div id="pin13_label" class="gpio_label_l"><strong>GPIO27</strong></div>
-        <div id="pin14_label" class="pin_gnd_label_r"><strong>GND</strong></div>
-        <div id="pin15_label" class="gpio_label_l"><strong>GPIO22</strong></div>
-        <div id="pin16_label" class="gpio_label_r"><strong>GPIO23</strong></div>
-        <div id="pin17_label" class="pin_3V3_label_l"><strong>3V3</strong></div>
-        <div id="pin18_label" class="gpio_label_r"><strong>GPIO24</strong></div>
-        <div id="pin19_label" class="gpio_label_l"><strong>GPIO10</strong></div>
-        <div id="pin20_label" class="pin_gnd_label_r"><strong>GND</strong></div>
-        <div id="pin21_label" class="gpio_label_l"><strong>GPIO9</strong></div>
-        <div id="pin22_label" class="gpio_label_r"><strong>GPIO25</strong></div>
-        <div id="pin23_label" class="gpio_label_l"><strong>GPIO11</strong></div>
-        <div id="pin24_label" class="gpio_label_r"><strong>GPIO8</strong></div>
-        <div id="pin25_label" class="pin_gnd_label_l"><strong>GND</strong></div>
-        <div id="pin26_label" class="gpio_label_r"><strong>GPIO7</strong></div>
-        <div id="pin27_label" class="gpio_label_l"><strong>ID_SD</strong></div>
-        <div id="pin28_label" class="gpio_label_r"><strong>ID_SC</strong></div>
-        <div id="pin29_label" class="gpio_label_l"><strong>GPIO5</strong></div>
-        <div id="pin30_label" class="pin_gnd_label_r"><strong>GND</strong></div>
-        <div id="pin31_label" class="gpio_label_l"><strong>GPIO6</strong></div>
-        <div id="pin32_label" class="gpio_label_r"><strong>GPIO12</strong></div>
-        <div id="pin33_label" class="gpio_label_l"><strong>GPIO13</strong></div>
-        <div id="pin34_label" class="pin_gnd_label_r"><strong>GND</strong></div>
-        <div id="pin35_label" class="gpio_label_l"><strong>GPIO19</strong></div>
-        <div id="pin36_label" class="gpio_label_r"><strong>GPIO16</strong></div>
-        <div id="pin37_label" class="gpio_label_l"><strong>GPIO26</strong></div>
-        <div id="pin38_label" class="gpio_label_r"><strong>GPIO20</strong></div>
-        <div id="pin39_label" class="pin_gnd_label_l"><strong>GND</strong></div>
-        <div id="pin40_label" class="gpio_label_r"><strong>GPIO21</strong></div>
-        
-        
-        
-        <div id="pin3_button">
-            <div class="onoffswitch3">
-                <input type="checkbox" name="onoffswitch3" class="onoffswitch3-checkbox" id="myonoffswitch3">
-                <label class="onoffswitch3-label" for="myonoffswitch3">
-                    <span class="onoffswitch3-inner"></span>
-                    <span class="onoffswitch3-switch"></span>
-                </label>
+    <div id='content'>
+        <div><h2><strong id='s_connection_d'>Not Connected To The Server!</strong></h2></div>
+        <div id='container'>
+            <div id="pin_header_label"></div>
+            <div id="pin1_label" class="pin_3V3_label_l"><strong>3V3</strong></div>
+            <div id="pin2_label" class="pin_5V_label_r"><strong>5V</strong></div>
+            <div id="pin3_label" class="gpio_label_l"><strong>GPIO2</strong></div>
+            <div id="pin4_label" class="pin_5V_label_r"><strong>5V</strong></div>
+            <div id="pin5_label" class="gpio_label_l"><strong>GPIO3</strong></div>
+            <div id="pin6_label" class="pin_gnd_label_r"><strong>GND</strong></div>
+            <div id="pin7_label" class="gpio_label_l"><strong>GPIO4</strong></div>
+            <div id="pin8_label" class="gpio_label_r"><strong>GPIO14</strong></div>
+            <div id="pin9_label" class="pin_gnd_label_l"><strong>GND</strong></div>
+            <div id="pin10_label" class="gpio_label_r"><strong>GPIO15</strong></div>
+            <div id="pin11_label" class="gpio_label_l"><strong>GPIO17</strong></div>
+            <div id="pin12_label" class="gpio_label_r"><strong>GPIO18</strong></div>
+            <div id="pin13_label" class="gpio_label_l"><strong>GPIO27</strong></div>
+            <div id="pin14_label" class="pin_gnd_label_r"><strong>GND</strong></div>
+            <div id="pin15_label" class="gpio_label_l"><strong>GPIO22</strong></div>
+            <div id="pin16_label" class="gpio_label_r"><strong>GPIO23</strong></div>
+            <div id="pin17_label" class="pin_3V3_label_l"><strong>3V3</strong></div>
+            <div id="pin18_label" class="gpio_label_r"><strong>GPIO24</strong></div>
+            <div id="pin19_label" class="gpio_label_l"><strong>GPIO10</strong></div>
+            <div id="pin20_label" class="pin_gnd_label_r"><strong>GND</strong></div>
+            <div id="pin21_label" class="gpio_label_l"><strong>GPIO9</strong></div>
+            <div id="pin22_label" class="gpio_label_r"><strong>GPIO25</strong></div>
+            <div id="pin23_label" class="gpio_label_l"><strong>GPIO11</strong></div>
+            <div id="pin24_label" class="gpio_label_r"><strong>GPIO8</strong></div>
+            <div id="pin25_label" class="pin_gnd_label_l"><strong>GND</strong></div>
+            <div id="pin26_label" class="gpio_label_r"><strong>GPIO7</strong></div>
+            <div id="pin27_label" class="gpio_label_l"><strong>ID_SD</strong></div>
+            <div id="pin28_label" class="gpio_label_r"><strong>ID_SC</strong></div>
+            <div id="pin29_label" class="gpio_label_l"><strong>GPIO5</strong></div>
+            <div id="pin30_label" class="pin_gnd_label_r"><strong>GND</strong></div>
+            <div id="pin31_label" class="gpio_label_l"><strong>GPIO6</strong></div>
+            <div id="pin32_label" class="gpio_label_r"><strong>GPIO12</strong></div>
+            <div id="pin33_label" class="gpio_label_l"><strong>GPIO13</strong></div>
+            <div id="pin34_label" class="pin_gnd_label_r"><strong>GND</strong></div>
+            <div id="pin35_label" class="gpio_label_l"><strong>GPIO19</strong></div>
+            <div id="pin36_label" class="gpio_label_r"><strong>GPIO16</strong></div>
+            <div id="pin37_label" class="gpio_label_l"><strong>GPIO26</strong></div>
+            <div id="pin38_label" class="gpio_label_r"><strong>GPIO20</strong></div>
+            <div id="pin39_label" class="pin_gnd_label_l"><strong>GND</strong></div>
+            <div id="pin40_label" class="gpio_label_r"><strong>GPIO21</strong></div>
+            
+            
+            
+            <div id="pin3_button">
+                <div class="onoffswitch3">
+                    <input type="checkbox" name="onoffswitch3" class="onoffswitch3-checkbox" id="myonoffswitch3">
+                    <label class="onoffswitch3-label" for="myonoffswitch3">
+                        <span class="onoffswitch3-inner"></span>
+                        <span class="onoffswitch3-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        
-        
-        <div id="pin5_button">
-            <div class="onoffswitch5">
-                <input type="checkbox" name="onoffswitch5" class="onoffswitch5-checkbox" id="myonoffswitch5" >
-                <label class="onoffswitch5-label" for="myonoffswitch5">
-                    <span class="onoffswitch5-inner"></span>
-                    <span class="onoffswitch5-switch"></span>
-                </label>
+            
+            
+            <div id="pin5_button">
+                <div class="onoffswitch5">
+                    <input type="checkbox" name="onoffswitch5" class="onoffswitch5-checkbox" id="myonoffswitch5" >
+                    <label class="onoffswitch5-label" for="myonoffswitch5">
+                        <span class="onoffswitch5-inner"></span>
+                        <span class="onoffswitch5-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        
-        <div id="pin7_button">
-            <div class="onoffswitch7">
-                <input type="checkbox" name="onoffswitch7" class="onoffswitch7-checkbox" id="myonoffswitch7">
-                <label class="onoffswitch7-label" for="myonoffswitch7">
-                    <span class="onoffswitch7-inner"></span>
-                    <span class="onoffswitch7-switch"></span>
-                </label>
+            
+            <div id="pin7_button">
+                <div class="onoffswitch7">
+                    <input type="checkbox" name="onoffswitch7" class="onoffswitch7-checkbox" id="myonoffswitch7">
+                    <label class="onoffswitch7-label" for="myonoffswitch7">
+                        <span class="onoffswitch7-inner"></span>
+                        <span class="onoffswitch7-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
 
-        <div id="pin8_button">
-            <div class="onoffswitch8">
-                <input type="checkbox" name="onoffswitch8" class="onoffswitch8-checkbox" id="myonoffswitch8">
-                <label class="onoffswitch8-label" for="myonoffswitch8">
-                    <span class="onoffswitch8-inner"></span>
-                    <span class="onoffswitch8-switch"></span>
-                </label>
+            <div id="pin8_button">
+                <div class="onoffswitch8">
+                    <input type="checkbox" name="onoffswitch8" class="onoffswitch8-checkbox" id="myonoffswitch8">
+                    <label class="onoffswitch8-label" for="myonoffswitch8">
+                        <span class="onoffswitch8-inner"></span>
+                        <span class="onoffswitch8-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        <div id="pin10_button">
-            <div class="onoffswitch10">
-                <input type="checkbox" name="onoffswitch10" class="onoffswitch10-checkbox" id="myonoffswitch10">
-                <label class="onoffswitch10-label" for="myonoffswitch10">
-                    <span class="onoffswitch10-inner"></span>
-                    <span class="onoffswitch10-switch"></span>
-                </label>
+            <div id="pin10_button">
+                <div class="onoffswitch10">
+                    <input type="checkbox" name="onoffswitch10" class="onoffswitch10-checkbox" id="myonoffswitch10">
+                    <label class="onoffswitch10-label" for="myonoffswitch10">
+                        <span class="onoffswitch10-inner"></span>
+                        <span class="onoffswitch10-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        <div id="pin11_button">
-            <div class="onoffswitch11">
-                <input type="checkbox" name="onoffswitch11" class="onoffswitch11-checkbox" id="myonoffswitch11">
-                <label class="onoffswitch11-label" for="myonoffswitch11">
-                    <span class="onoffswitch11-inner"></span>
-                    <span class="onoffswitch11-switch"></span>
-                </label>
+            <div id="pin11_button">
+                <div class="onoffswitch11">
+                    <input type="checkbox" name="onoffswitch11" class="onoffswitch11-checkbox" id="myonoffswitch11">
+                    <label class="onoffswitch11-label" for="myonoffswitch11">
+                        <span class="onoffswitch11-inner"></span>
+                        <span class="onoffswitch11-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        
-        
-        <div id="pin12_button">
-            <div class="onoffswitch12">
-                <input type="checkbox" name="onoffswitch12" class="onoffswitch12-checkbox" id="myonoffswitch12">
-                <label class="onoffswitch12-label" for="myonoffswitch12">
-                    <span class="onoffswitch12-inner"></span>
-                    <span class="onoffswitch12-switch"></span>
-                </label>
+            
+            
+            <div id="pin12_button">
+                <div class="onoffswitch12">
+                    <input type="checkbox" name="onoffswitch12" class="onoffswitch12-checkbox" id="myonoffswitch12">
+                    <label class="onoffswitch12-label" for="myonoffswitch12">
+                        <span class="onoffswitch12-inner"></span>
+                        <span class="onoffswitch12-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        <div id="pin13_button">
-            <div class="onoffswitch13">
-                <input type="checkbox" name="onoffswitch13" class="onoffswitch13-checkbox" id="myonoffswitch13">
-                <label class="onoffswitch13-label" for="myonoffswitch13">
-                    <span class="onoffswitch13-inner"></span>
-                    <span class="onoffswitch13-switch"></span>
-                </label>
+            <div id="pin13_button">
+                <div class="onoffswitch13">
+                    <input type="checkbox" name="onoffswitch13" class="onoffswitch13-checkbox" id="myonoffswitch13">
+                    <label class="onoffswitch13-label" for="myonoffswitch13">
+                        <span class="onoffswitch13-inner"></span>
+                        <span class="onoffswitch13-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        <div id="pin15_button">
-            <div class="onoffswitch15">
-                <input type="checkbox" name="onoffswitch15" class="onoffswitch15-checkbox" id="myonoffswitch15">
-                <label class="onoffswitch15-label" for="myonoffswitch15">
-                    <span class="onoffswitch15-inner"></span>
-                    <span class="onoffswitch15-switch"></span>
-                </label>
+            <div id="pin15_button">
+                <div class="onoffswitch15">
+                    <input type="checkbox" name="onoffswitch15" class="onoffswitch15-checkbox" id="myonoffswitch15">
+                    <label class="onoffswitch15-label" for="myonoffswitch15">
+                        <span class="onoffswitch15-inner"></span>
+                        <span class="onoffswitch15-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        
-        <div id="pin16_button">
-            <div class="onoffswitch16">
-                <input type="checkbox" name="onoffswitch16" class="onoffswitch16-checkbox" id="myonoffswitch16">
-                <label class="onoffswitch16-label" for="myonoffswitch16">
-                    <span class="onoffswitch16-inner"></span>
-                    <span class="onoffswitch16-switch"></span>
-                </label>
+            
+            <div id="pin16_button">
+                <div class="onoffswitch16">
+                    <input type="checkbox" name="onoffswitch16" class="onoffswitch16-checkbox" id="myonoffswitch16">
+                    <label class="onoffswitch16-label" for="myonoffswitch16">
+                        <span class="onoffswitch16-inner"></span>
+                        <span class="onoffswitch16-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        
-        <div id="pin18_button">
-            <div class="onoffswitch18">
-                <input type="checkbox" name="onoffswitch18" class="onoffswitch18-checkbox" id="myonoffswitch18">
-                <label class="onoffswitch18-label" for="myonoffswitch18">
-                    <span class="onoffswitch18-inner"></span>
-                    <span class="onoffswitch18-switch"></span>
-                </label>
+            
+            <div id="pin18_button">
+                <div class="onoffswitch18">
+                    <input type="checkbox" name="onoffswitch18" class="onoffswitch18-checkbox" id="myonoffswitch18">
+                    <label class="onoffswitch18-label" for="myonoffswitch18">
+                        <span class="onoffswitch18-inner"></span>
+                        <span class="onoffswitch18-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        <div id="pin19_button">
-            <div class="onoffswitch19">
-                <input type="checkbox" name="onoffswitch19" class="onoffswitch19-checkbox" id="myonoffswitch19">
-                <label class="onoffswitch19-label" for="myonoffswitch19">
-                    <span class="onoffswitch19-inner"></span>
-                    <span class="onoffswitch19-switch"></span>
-                </label>
+            <div id="pin19_button">
+                <div class="onoffswitch19">
+                    <input type="checkbox" name="onoffswitch19" class="onoffswitch19-checkbox" id="myonoffswitch19">
+                    <label class="onoffswitch19-label" for="myonoffswitch19">
+                        <span class="onoffswitch19-inner"></span>
+                        <span class="onoffswitch19-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        
-        <div id="pin21_button">
-            <div class="onoffswitch21">
-                <input type="checkbox" name="onoffswitch21" class="onoffswitch21-checkbox" id="myonoffswitch21">
-                <label class="onoffswitch21-label" for="myonoffswitch21">
-                    <span class="onoffswitch21-inner"></span>
-                    <span class="onoffswitch21-switch"></span>
-                </label>
+            
+            <div id="pin21_button">
+                <div class="onoffswitch21">
+                    <input type="checkbox" name="onoffswitch21" class="onoffswitch21-checkbox" id="myonoffswitch21">
+                    <label class="onoffswitch21-label" for="myonoffswitch21">
+                        <span class="onoffswitch21-inner"></span>
+                        <span class="onoffswitch21-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        <div id="pin22_button">
-            <div class="onoffswitch22">
-                <input type="checkbox" name="onoffswitch22" class="onoffswitch22-checkbox" id="myonoffswitch22">
-                <label class="onoffswitch22-label" for="myonoffswitch22">
-                    <span class="onoffswitch22-inner"></span>
-                    <span class="onoffswitch22-switch"></span>
-                </label>
+            <div id="pin22_button">
+                <div class="onoffswitch22">
+                    <input type="checkbox" name="onoffswitch22" class="onoffswitch22-checkbox" id="myonoffswitch22">
+                    <label class="onoffswitch22-label" for="myonoffswitch22">
+                        <span class="onoffswitch22-inner"></span>
+                        <span class="onoffswitch22-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        <div id="pin23_button">
-            <div class="onoffswitch23">
-                <input type="checkbox" name="onoffswitch23" class="onoffswitch23-checkbox" id="myonoffswitch23">
-                <label class="onoffswitch23-label" for="myonoffswitch23">
-                    <span class="onoffswitch23-inner"></span>
-                    <span class="onoffswitch23-switch"></span>
-                </label>
+            <div id="pin23_button">
+                <div class="onoffswitch23">
+                    <input type="checkbox" name="onoffswitch23" class="onoffswitch23-checkbox" id="myonoffswitch23">
+                    <label class="onoffswitch23-label" for="myonoffswitch23">
+                        <span class="onoffswitch23-inner"></span>
+                        <span class="onoffswitch23-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        <div id="pin24_button">
-            <div class="onoffswitch24">
-                <input type="checkbox" name="onoffswitch24" class="onoffswitch24-checkbox" id="myonoffswitch24">
-                <label class="onoffswitch24-label" for="myonoffswitch24">
-                    <span class="onoffswitch24-inner"></span>
-                    <span class="onoffswitch24-switch"></span>
-                </label>
+            <div id="pin24_button">
+                <div class="onoffswitch24">
+                    <input type="checkbox" name="onoffswitch24" class="onoffswitch24-checkbox" id="myonoffswitch24">
+                    <label class="onoffswitch24-label" for="myonoffswitch24">
+                        <span class="onoffswitch24-inner"></span>
+                        <span class="onoffswitch24-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        
-        <div id="pin26_button">
-            <div class="onoffswitch26">
-                <input type="checkbox" name="onoffswitch26" class="onoffswitch26-checkbox" id="myonoffswitch26">
-                <label class="onoffswitch26-label" for="myonoffswitch26">
-                    <span class="onoffswitch26-inner"></span>
-                    <span class="onoffswitch26-switch"></span>
-                </label>
+            
+            <div id="pin26_button">
+                <div class="onoffswitch26">
+                    <input type="checkbox" name="onoffswitch26" class="onoffswitch26-checkbox" id="myonoffswitch26">
+                    <label class="onoffswitch26-label" for="myonoffswitch26">
+                        <span class="onoffswitch26-inner"></span>
+                        <span class="onoffswitch26-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        
-        
-        <div id="pin29_button">
-            <div class="onoffswitch29">
-                <input type="checkbox" name="onoffswitch29" class="onoffswitch29-checkbox" id="myonoffswitch29">
-                <label class="onoffswitch29-label" for="myonoffswitch29">
-                    <span class="onoffswitch29-inner"></span>
-                    <span class="onoffswitch29-switch"></span>
-                </label>
+            
+            
+            <div id="pin29_button">
+                <div class="onoffswitch29">
+                    <input type="checkbox" name="onoffswitch29" class="onoffswitch29-checkbox" id="myonoffswitch29">
+                    <label class="onoffswitch29-label" for="myonoffswitch29">
+                        <span class="onoffswitch29-inner"></span>
+                        <span class="onoffswitch29-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        
-        <div id="pin31_button">
-            <div class="onoffswitch31">
-                <input type="checkbox" name="onoffswitch31" class="onoffswitch31-checkbox" id="myonoffswitch31">
-                <label class="onoffswitch31-label" for="myonoffswitch31">
-                    <span class="onoffswitch31-inner"></span>
-                    <span class="onoffswitch31-switch"></span>
-                </label>
+            
+            <div id="pin31_button">
+                <div class="onoffswitch31">
+                    <input type="checkbox" name="onoffswitch31" class="onoffswitch31-checkbox" id="myonoffswitch31">
+                    <label class="onoffswitch31-label" for="myonoffswitch31">
+                        <span class="onoffswitch31-inner"></span>
+                        <span class="onoffswitch31-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        <div id="pin32_button">
-            <div class="onoffswitch32">
-                <input type="checkbox" name="onoffswitch32" class="onoffswitch32-checkbox" id="myonoffswitch32">
-                <label class="onoffswitch32-label" for="myonoffswitch32">
-                    <span class="onoffswitch32-inner"></span>
-                    <span class="onoffswitch32-switch"></span>
-                </label>
+            <div id="pin32_button">
+                <div class="onoffswitch32">
+                    <input type="checkbox" name="onoffswitch32" class="onoffswitch32-checkbox" id="myonoffswitch32">
+                    <label class="onoffswitch32-label" for="myonoffswitch32">
+                        <span class="onoffswitch32-inner"></span>
+                        <span class="onoffswitch32-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        <div id="pin33_button">
-            <div class="onoffswitch33">
-                <input type="checkbox" name="onoffswitch33" class="onoffswitch33-checkbox" id="myonoffswitch33">
-                <label class="onoffswitch33-label" for="myonoffswitch33">
-                    <span class="onoffswitch33-inner"></span>
-                    <span class="onoffswitch33-switch"></span>
-                </label>
+            <div id="pin33_button">
+                <div class="onoffswitch33">
+                    <input type="checkbox" name="onoffswitch33" class="onoffswitch33-checkbox" id="myonoffswitch33">
+                    <label class="onoffswitch33-label" for="myonoffswitch33">
+                        <span class="onoffswitch33-inner"></span>
+                        <span class="onoffswitch33-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        
-        <div id="pin35_button">
-            <div class="onoffswitch35">
-                <input type="checkbox" name="onoffswitch35" class="onoffswitch35-checkbox" id="myonoffswitch35">
-                <label class="onoffswitch35-label" for="myonoffswitch35">
-                    <span class="onoffswitch35-inner"></span>
-                    <span class="onoffswitch35-switch"></span>
-                </label>
+            
+            <div id="pin35_button">
+                <div class="onoffswitch35">
+                    <input type="checkbox" name="onoffswitch35" class="onoffswitch35-checkbox" id="myonoffswitch35">
+                    <label class="onoffswitch35-label" for="myonoffswitch35">
+                        <span class="onoffswitch35-inner"></span>
+                        <span class="onoffswitch35-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        <div id="pin36_button">
-            <div class="onoffswitch36">
-                <input type="checkbox" name="onoffswitch36" class="onoffswitch36-checkbox" id="myonoffswitch36">
-                <label class="onoffswitch36-label" for="myonoffswitch36">
-                    <span class="onoffswitch36-inner"></span>
-                    <span class="onoffswitch36-switch"></span>
-                </label>
+            <div id="pin36_button">
+                <div class="onoffswitch36">
+                    <input type="checkbox" name="onoffswitch36" class="onoffswitch36-checkbox" id="myonoffswitch36">
+                    <label class="onoffswitch36-label" for="myonoffswitch36">
+                        <span class="onoffswitch36-inner"></span>
+                        <span class="onoffswitch36-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        <div id="pin37_button">
-            <div class="onoffswitch37">
-                <input type="checkbox" name="onoffswitch37" class="onoffswitch37-checkbox" id="myonoffswitch37">
-                <label class="onoffswitch37-label" for="myonoffswitch37">
-                    <span class="onoffswitch37-inner"></span>
-                    <span class="onoffswitch37-switch"></span>
-                </label>
+            <div id="pin37_button">
+                <div class="onoffswitch37">
+                    <input type="checkbox" name="onoffswitch37" class="onoffswitch37-checkbox" id="myonoffswitch37">
+                    <label class="onoffswitch37-label" for="myonoffswitch37">
+                        <span class="onoffswitch37-inner"></span>
+                        <span class="onoffswitch37-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        <div id="pin38_button">
-            <div class="onoffswitch38">
-                <input type="checkbox" name="onoffswitch38" class="onoffswitch38-checkbox" id="myonoffswitch38">
-                <label class="onoffswitch38-label" for="myonoffswitch38">
-                    <span class="onoffswitch38-inner"></span>
-                    <span class="onoffswitch38-switch"></span>
-                </label>
+            <div id="pin38_button">
+                <div class="onoffswitch38">
+                    <input type="checkbox" name="onoffswitch38" class="onoffswitch38-checkbox" id="myonoffswitch38">
+                    <label class="onoffswitch38-label" for="myonoffswitch38">
+                        <span class="onoffswitch38-inner"></span>
+                        <span class="onoffswitch38-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
-        
-        <div id="pin40_button">
-            <div class="onoffswitch40">
-                <input type="checkbox" name="onoffswitch40" class="onoffswitch40-checkbox" id="myonoffswitch40">
-                <label class="onoffswitch40-label" for="myonoffswitch40">
-                    <span class="onoffswitch40-inner"></span>
-                    <span class="onoffswitch40-switch"></span>
-                </label>
+            
+            <div id="pin40_button">
+                <div class="onoffswitch40">
+                    <input type="checkbox" name="onoffswitch40" class="onoffswitch40-checkbox" id="myonoffswitch40">
+                    <label class="onoffswitch40-label" for="myonoffswitch40">
+                        <span class="onoffswitch40-inner"></span>
+                        <span class="onoffswitch40-switch"></span>
+                    </label>
+                </div>
             </div>
-        </div>
 
-        <div id="pin1_number" class="pin_back_colour">
-            <span class="circle_left"><strong class="pin_number1">1</strong></span>
-        </div>
-        <div id="pin2_number" class="pin_back_colour">
-            <span class="circle_right"><strong class="pin_number1">2</strong></span>
-        </div>
-        <div id="pin3_number" class="pin_back_colour">
-                <span class="circle_left"><strong class="pin_number1">3</strong></span>
-        </div>
-        <div id="pin4_number" class="pin_back_colour">
-                <span class="circle_right"><strong class="pin_number1">4</strong></span>
-        </div>
-        <div id="pin5_number" class="pin_back_colour">
-                <span class="circle_left"><strong class="pin_number1">5</strong></span>
-        </div>
-        <div id="pin6_number" class="pin_back_colour">
-                <span class="circle_right"><strong class="pin_number1">6</strong></span>
-        </div>
-        <div id="pin7_number" class="pin_back_colour">
-                <span class="circle_left"><strong class="pin_number1">7</strong></span>
-        </div>
-        <div id="pin8_number" class="pin_back_colour">
-                <span class="circle_right"><strong class="pin_number1">8</strong></span>
-        </div>
-        <div id="pin9_number" class="pin_back_colour">
-                <span class="circle_left"><strong class="pin_number1">9</strong></span>
-        </div>
-        <div id="pin10_number" class="pin_back_colour">
-            <span class="circle_right"><strong class="pin_number2">10</strong></span>
-        </div>
-        <div id="pin11_number" class="pin_back_colour">
-                <span class="circle_left"><strong class="pin_number2">11</strong></span>
-        </div>
-        <div id="pin12_number" class="pin_back_colour">
-                <span class="circle_right"><strong class="pin_number2">12</strong></span>
-        </div>
-        <div id="pin13_number" class="pin_back_colour">
-                <span class="circle_left"><strong class="pin_number2">13</strong></span>
-        </div>
-        <div id="pin14_number" class="pin_back_colour">
-                <span class="circle_right"><strong class="pin_number2">14</strong></span>
-        </div>
-        <div id="pin15_number" class="pin_back_colour">
-                <span class="circle_left"><strong class="pin_number2">15</strong></span>
-        </div>
-        <div id="pin16_number" class="pin_back_colour">
-                <span class="circle_right"><strong class="pin_number2">16</strong></span>
-        </div>
-        <div id="pin17_number" class="pin_back_colour">
-                <span class="circle_left"><strong class="pin_number2">17</strong></span>
-        </div>
-        <div id="pin18_number" class="pin_back_colour">
-            <span class="circle_right"><strong class="pin_number2">18</strong></span>
-        </div>
-        <div id="pin19_number" class="pin_back_colour">
-                <span class="circle_left"><strong class="pin_number2">19</strong></span>
-        </div>
-        <div id="pin20_number" class="pin_back_colour">
-                <span class="circle_right"><strong class="pin_number2">20</strong></span>
-        </div>
-        <div id="pin21_number" class="pin_back_colour">
-                <span class="circle_left"><strong class="pin_number2">21</strong></span>
-        </div>
-        <div id="pin22_number" class="pin_back_colour">
-                <span class="circle_right"><strong class="pin_number2">22</strong></span>
-        </div>
-        <div id="pin23_number" class="pin_back_colour">
-                <span class="circle_left"><strong class="pin_number2">23</strong></span>
-        </div>
-        <div id="pin24_number" class="pin_back_colour">
-                <span class="circle_right"><strong class="pin_number2">24</strong></span>
-        </div>
-        <div id="pin25_number" class="pin_back_colour">
-                <span class="circle_left"><strong class="pin_number2">25</strong></span>
-        </div>
-        <div id="pin26_number" class="pin_back_colour">
-                <span class="circle_right"><strong class="pin_number2">26</strong></span>
-        </div>
-        <div id="pin27_number" class="pin_back_colour">
-                <span class="circle_left"><strong class="pin_number2">27</strong></span>
-        </div>
-        <div id="pin28_number" class="pin_back_colour">
-                <span class="circle_right"><strong class="pin_number2">28</strong></span>
-        </div>
-        <div id="pin29_number" class="pin_back_colour">
-                <span class="circle_left"><strong class="pin_number2">29</strong></span>
-        </div>
-        <div id="pin30_number" class="pin_back_colour">
-                <span class="circle_right"><strong class="pin_number2">30</strong></span>
-        </div>
-        <div id="pin31_number" class="pin_back_colour">
-                <span class="circle_left"><strong class="pin_number2">31</strong></span>
-        </div>
-        <div id="pin32_number" class="pin_back_colour">
-                <span class="circle_right"><strong class="pin_number2">32</strong></span>
-        </div>
-        <div id="pin33_number" class="pin_back_colour">
-                <span class="circle_left"><strong class="pin_number2">33</strong></span>
-        </div>
-        <div id="pin34_number" class="pin_back_colour">
-                <span class="circle_right"><strong class="pin_number2">34</strong></span>
-        </div>
-        <div id="pin35_number" class="pin_back_colour">
-                <span class="circle_left"><strong class="pin_number2">35</strong></span>
-        </div>
-        <div id="pin36_number" class="pin_back_colour">
-                <span class="circle_right"><strong class="pin_number2">36</strong></span>
-        </div>
-        <div id="pin37_number" class="pin_back_colour">
-                <span class="circle_left"><strong class="pin_number2">37</strong></span>
-        </div>
-        <div id="pin38_number" class="pin_back_colour">
-                <span class="circle_right"><strong class="pin_number2">38</strong></span>
-        </div>
-        <div id="pin39_number" class="pin_back_colour">
-                <span class="circle_left"><strong class="pin_number2">39</strong></span>
-        </div>
-        <div id="pin40_number" class="pin_back_colour">
-                <span class="circle_right"><strong class="pin_number2">40</strong></span>
-        </div>
+            <div id="pin1_number" class="pin_back_colour">
+                <span class="circle_left"><strong class="pin_number1">1</strong></span>
+            </div>
+            <div id="pin2_number" class="pin_back_colour">
+                <span class="circle_right"><strong class="pin_number1">2</strong></span>
+            </div>
+            <div id="pin3_number" class="pin_back_colour">
+                    <span class="circle_left"><strong class="pin_number1">3</strong></span>
+            </div>
+            <div id="pin4_number" class="pin_back_colour">
+                    <span class="circle_right"><strong class="pin_number1">4</strong></span>
+            </div>
+            <div id="pin5_number" class="pin_back_colour">
+                    <span class="circle_left"><strong class="pin_number1">5</strong></span>
+            </div>
+            <div id="pin6_number" class="pin_back_colour">
+                    <span class="circle_right"><strong class="pin_number1">6</strong></span>
+            </div>
+            <div id="pin7_number" class="pin_back_colour">
+                    <span class="circle_left"><strong class="pin_number1">7</strong></span>
+            </div>
+            <div id="pin8_number" class="pin_back_colour">
+                    <span class="circle_right"><strong class="pin_number1">8</strong></span>
+            </div>
+            <div id="pin9_number" class="pin_back_colour">
+                    <span class="circle_left"><strong class="pin_number1">9</strong></span>
+            </div>
+            <div id="pin10_number" class="pin_back_colour">
+                <span class="circle_right"><strong class="pin_number2">10</strong></span>
+            </div>
+            <div id="pin11_number" class="pin_back_colour">
+                    <span class="circle_left"><strong class="pin_number2">11</strong></span>
+            </div>
+            <div id="pin12_number" class="pin_back_colour">
+                    <span class="circle_right"><strong class="pin_number2">12</strong></span>
+            </div>
+            <div id="pin13_number" class="pin_back_colour">
+                    <span class="circle_left"><strong class="pin_number2">13</strong></span>
+            </div>
+            <div id="pin14_number" class="pin_back_colour">
+                    <span class="circle_right"><strong class="pin_number2">14</strong></span>
+            </div>
+            <div id="pin15_number" class="pin_back_colour">
+                    <span class="circle_left"><strong class="pin_number2">15</strong></span>
+            </div>
+            <div id="pin16_number" class="pin_back_colour">
+                    <span class="circle_right"><strong class="pin_number2">16</strong></span>
+            </div>
+            <div id="pin17_number" class="pin_back_colour">
+                    <span class="circle_left"><strong class="pin_number2">17</strong></span>
+            </div>
+            <div id="pin18_number" class="pin_back_colour">
+                <span class="circle_right"><strong class="pin_number2">18</strong></span>
+            </div>
+            <div id="pin19_number" class="pin_back_colour">
+                    <span class="circle_left"><strong class="pin_number2">19</strong></span>
+            </div>
+            <div id="pin20_number" class="pin_back_colour">
+                    <span class="circle_right"><strong class="pin_number2">20</strong></span>
+            </div>
+            <div id="pin21_number" class="pin_back_colour">
+                    <span class="circle_left"><strong class="pin_number2">21</strong></span>
+            </div>
+            <div id="pin22_number" class="pin_back_colour">
+                    <span class="circle_right"><strong class="pin_number2">22</strong></span>
+            </div>
+            <div id="pin23_number" class="pin_back_colour">
+                    <span class="circle_left"><strong class="pin_number2">23</strong></span>
+            </div>
+            <div id="pin24_number" class="pin_back_colour">
+                    <span class="circle_right"><strong class="pin_number2">24</strong></span>
+            </div>
+            <div id="pin25_number" class="pin_back_colour">
+                    <span class="circle_left"><strong class="pin_number2">25</strong></span>
+            </div>
+            <div id="pin26_number" class="pin_back_colour">
+                    <span class="circle_right"><strong class="pin_number2">26</strong></span>
+            </div>
+            <div id="pin27_number" class="pin_back_colour">
+                    <span class="circle_left"><strong class="pin_number2">27</strong></span>
+            </div>
+            <div id="pin28_number" class="pin_back_colour">
+                    <span class="circle_right"><strong class="pin_number2">28</strong></span>
+            </div>
+            <div id="pin29_number" class="pin_back_colour">
+                    <span class="circle_left"><strong class="pin_number2">29</strong></span>
+            </div>
+            <div id="pin30_number" class="pin_back_colour">
+                    <span class="circle_right"><strong class="pin_number2">30</strong></span>
+            </div>
+            <div id="pin31_number" class="pin_back_colour">
+                    <span class="circle_left"><strong class="pin_number2">31</strong></span>
+            </div>
+            <div id="pin32_number" class="pin_back_colour">
+                    <span class="circle_right"><strong class="pin_number2">32</strong></span>
+            </div>
+            <div id="pin33_number" class="pin_back_colour">
+                    <span class="circle_left"><strong class="pin_number2">33</strong></span>
+            </div>
+            <div id="pin34_number" class="pin_back_colour">
+                    <span class="circle_right"><strong class="pin_number2">34</strong></span>
+            </div>
+            <div id="pin35_number" class="pin_back_colour">
+                    <span class="circle_left"><strong class="pin_number2">35</strong></span>
+            </div>
+            <div id="pin36_number" class="pin_back_colour">
+                    <span class="circle_right"><strong class="pin_number2">36</strong></span>
+            </div>
+            <div id="pin37_number" class="pin_back_colour">
+                    <span class="circle_left"><strong class="pin_number2">37</strong></span>
+            </div>
+            <div id="pin38_number" class="pin_back_colour">
+                    <span class="circle_right"><strong class="pin_number2">38</strong></span>
+            </div>
+            <div id="pin39_number" class="pin_back_colour">
+                    <span class="circle_left"><strong class="pin_number2">39</strong></span>
+            </div>
+            <div id="pin40_number" class="pin_back_colour">
+                    <span class="circle_right"><strong class="pin_number2">40</strong></span>
+            </div>
 
-        <div id="pin_footer_label"></div>
+            <div id="pin_footer_label"></div>
 
+            <div>
+                <button id= 'clear_all_btn'>Clear All</button>
+            </div>
+            <div>
+                <button id= 'set_all_btn'>Set All</button>
+            </div>
 
-
-
-
+        </div>
     </div>
+    
     
     <script src="index.js"></script>
 </body>
